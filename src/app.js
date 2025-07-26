@@ -20,4 +20,12 @@ app.use('/api/issues', issueRoutes);
 const projectRoutes = require('./routes/projectRoutes');
 app.use('/api/projects', projectRoutes);
 
+const commentRoutes = require('./routes/commentRoutes');
+app.use('/api/comments', commentRoutes);
+
+const projectMemberRoutes = require('./routes/projectMemberRoutes');
+app.use('/api/projects', projectMemberRoutes);
+
+
+
 module.exports = app;
