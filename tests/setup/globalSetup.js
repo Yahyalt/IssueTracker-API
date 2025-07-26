@@ -14,5 +14,14 @@ afterEach(async () => {
 
 // Close database connection after all tests
 afterAll(async () => {
+  // Close test database connection
   await testDb.destroy();
+  
+  // Close app database connection (if it exists)
+  try {
+    const appDb = require('../../src/config/db');
+    await appDb.destroy();
+  } catch (error) {
+    // Ignore if already closed
+  }
 }); 
