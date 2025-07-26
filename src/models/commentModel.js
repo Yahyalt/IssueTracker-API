@@ -3,7 +3,7 @@ const Comment = {
     async addComment(issueId, userId, content) {
         return db('comments').insert({
             issue_id: issueId,
-            user_id: userId,
+            author_id: userId,
             content: content,
             created_at: new Date(),
             updated_at: new Date()
@@ -12,7 +12,7 @@ const Comment = {
     async getCommentsByIssueId(issueId) {
         return db('comments')
             .where({ issue_id: issueId })
-            .join('users', 'comments.user_id', 'users.id')
+            .join('users', 'comments.author_id', 'users.id')
             .select('comments.*', 'users.name as user_name');
     },
     async updateComment(commentId, content) {
