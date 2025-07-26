@@ -6,14 +6,17 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {
-  "start": "node index.js",
-  "dev": "nodemon index.js",
-  "migrate": "knex migrate:latest",
-  "migrate:rollback": "knex migrate:rollback",
-  "migrate:status": "knex migrate:status",
-  "test": "jest"
-  },
+      "scripts": {
+     "start": "node index.js",
+     "dev": "nodemon index.js",
+     "migrate": "knex migrate:latest",
+     "migrate:rollback": "knex migrate:rollback",
+     "migrate:status": "knex migrate:status",
+     "test": "cross-env NODE_ENV=test jest --config=tests/jest.config.js",
+     "test:watch": "cross-env NODE_ENV=test jest --config=tests/jest.config.js --watch",
+     "test:coverage": "cross-env NODE_ENV=test jest --config=tests/jest.config.js --coverage",
+     "test:debug": "cross-env NODE_ENV=test jest --config=tests/jest.config.js --detectOpenHandles --forceExit"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yahyalt/IssueTracker-API.git"
@@ -34,6 +37,7 @@
     "pg": "^8.16.3"
   },
   "devDependencies": {
+    "cross-env": "^10.0.0",
     "jest": "^30.0.3",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.1"
