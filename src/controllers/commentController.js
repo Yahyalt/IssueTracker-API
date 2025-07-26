@@ -2,7 +2,7 @@ const Comment = require("../models/commentModel");
 const addComment = async (req, res) => {
     try {
         const { issueId, content } = req.body;
-        const userId = req.user.id; // Assuming user ID is stored in req.user
+        const userId = req.user.id;
         const comment = await Comment.addComment(issueId, userId, content);
         res.status(201).json(comment[0]);
     } catch (err) {
@@ -20,7 +20,7 @@ const getCommentsByIssueId = async (req, res) => {
 const updateComment = async (req, res) => {
     try {
         const { content } = req.body;
-        const commentId = req.params.commentId;
+        const commentId = req.params.id;
         const updatedComment = await Comment.updateComment(commentId, content);
         if (!updatedComment.length) return res.status(404).json({ error: "Comment not found" });
         res.json(updatedComment[0]);
@@ -30,7 +30,7 @@ const updateComment = async (req, res) => {
 }
 const deleteComment = async (req, res) => {
     try {
-        const commentId = req.params.commentId;
+        const commentId = req.params.id;
         const deleted = await Comment.deleteComment(commentId);
         if (!deleted) return res.status(404).json({ error: "Comment not found" });
         res.status(204).send();
