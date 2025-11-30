@@ -1,8 +1,8 @@
-# IssueTracker-API 🐛
+# IssueTracker-API 
 
 A robust RESTful API for managing software development issues, projects, and team collaboration. Built with Node.js, Express, and PostgreSQL, this API provides complete project and issue tracking functionality with authentication and role-based access.
 
-## 🌟 Features
+## Features
 
 - **User Authentication**: Secure JWT-based authentication with bcrypt password hashing
 - **Project Management**: Create, read, update, and delete projects
@@ -13,7 +13,7 @@ A robust RESTful API for managing software development issues, projects, and tea
 - **Database Migrations**: Structured database schema management with Knex.js
 - **Comprehensive Testing**: Integration tests with Jest and Supertest
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Node.js, Express.js
 - **Database**: PostgreSQL
@@ -22,7 +22,7 @@ A robust RESTful API for managing software development issues, projects, and tea
 - **Testing**: Jest, Supertest
 - **Development**: Nodemon for hot-reloading
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this project, make sure you have:
 
@@ -30,7 +30,7 @@ Before running this project, make sure you have:
 - PostgreSQL (v12 or higher)
 - npm or yarn package manager
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -69,7 +69,7 @@ Before running this project, make sure you have:
 
 The API will be running on `http://localhost:8000`
 
-## 📊 Database Schema
+## Database Schema
 
 The application uses the following database tables:
 
@@ -79,7 +79,7 @@ The application uses the following database tables:
 - **project_members**: Many-to-many relationship between users and projects
 - **comments**: Comments on issues
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 | Method | Endpoint | Description | Auth Required |
@@ -121,7 +121,7 @@ The application uses the following database tables:
 | PUT | `/api/comments/:id` | Update a comment | Yes |
 | DELETE | `/api/comments/:id` | Delete a comment | Yes |
 
-## 📝 Example API Usage
+## Example API Usage
 
 ### Register a User
 ```bash
@@ -156,7 +156,7 @@ curl -X POST http://localhost:8000/api/projects \
   }'
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -174,7 +174,7 @@ npm run test:coverage
 npm run test:debug
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 IssueTracker-API/
@@ -212,7 +212,7 @@ IssueTracker-API/
 └── package.json              # Project dependencies
 ```
 
-## 🔧 Available Scripts
+## Available Scripts
 
 - `npm start` - Start the production server
 - `npm run dev` - Start development server with nodemon
@@ -223,7 +223,7 @@ IssueTracker-API/
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
 
-## 🔐 Security Features
+## Security Features
 
 - Password hashing using bcrypt
 - JWT-based authentication
@@ -231,19 +231,19 @@ IssueTracker-API/
 - Role-based access control (Admin, Developer, Tester)
 - SQL injection protection with Knex.js parameterized queries
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 
-## 👤 Author
+## Author
 
 **Yahya Hafidz**
 
 - GitHub: [@Yahyalt](https://github.com/Yahyalt)
 - Project Link: [https://github.com/Yahyalt/IssueTracker-API](https://github.com/Yahyalt/IssueTracker-API)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built as a portfolio project to demonstrate full-stack API development skills
 - Implements modern REST API best practices
@@ -251,4 +251,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-⭐ If you found this project helpful, please give it a star!
+If you found this project helpful, please give it a star!
